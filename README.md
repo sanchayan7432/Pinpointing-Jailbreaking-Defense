@@ -60,5 +60,30 @@ Experiments were conducted across multiple datasets and defense models:
 
 (vi) SecAlign: Preference-tuned to reject natural-language jailbreaks (DirectRequest, HumanJailbreaks, ZeroShot).
 
+**🧪 Structured Evaluation Protocol**
+We propose a 4-step sequential evaluation framework:
 
+**Optimization-Based Adversarial Prompts**
+
+Attacks: AutoPrompt, AutoDAN, GBDA
+
+Tests: Perplexity filters.
+
+**Optimization-Based Token-Level Attacks**
+
+Attacks: AutoDAN, GBDA, GCG, UAT, PEZ
+
+Tests: Rephrasing/Retokenization defenses.
+
+**Semantic Rewriting & Context Poisoning**
+
+Attacks: GBDA, GCG variants, FewShot
+
+Tests: Legilimens, LlamaGuard.
+
+**Natural-Language Jailbreaks**
+
+Attacks: AutoDAN, DirectRequest, HumanJailbreaks, ZeroShot
+
+Tests: LLMModerator, SecAlign.
   
