@@ -45,41 +45,6 @@ Defenses are grouped into four primary classes:
   Embedding safety alignment into system prompts and preference fine-tuning.
   Example: LlamaGuard, SecAlign.
 
-**#📊 Evaluation Results**
-Experiments were conducted across multiple datasets and defense models:
-
-(i) Legilimens: Effective against semantic/contextual attacks (FewShot, GCG variants).
-
-(ii) LlamaGuard: Achieves 94% precision, 84% recall in unsafe detection; strong against semantic rewriting.
-
-(iii) LLMModerator: 100% success against most optimization attacks, but weaker against human-crafted jailbreaks.
-
-(iv) Perplexity defenses: Neutralize AutoPrompt, AutoDAN, GBDA by filtering gibberish high-perplexity suffixes.
-
-(v) Rephrasing/Retokenization: Reduce attack success rates to <1% for optimization-based suffix attacks.
-
-(vi) SecAlign: Preference-tuned to reject natural-language jailbreaks (DirectRequest, HumanJailbreaks, ZeroShot).
-
-**🧪 Structured Evaluation Protocol**
-We propose a 4-step sequential evaluation framework:
-
-**1. Optimization-Based Adversarial Prompts**
-
-Attacks: AutoPrompt, AutoDAN, GBDA
-
-Tests: Perplexity filters.
-
-**2. Optimization-Based Token-Level Attacks**
-
-Attacks: AutoDAN, GBDA, GCG, UAT, PEZ
-
-Tests: Rephrasing/Retokenization defenses.
-
-**3. Semantic Rewriting & Context Poisoning**
-
-Attacks: GBDA, GCG variants, FewShot
-
-Tests: Legilimens, LlamaGuard.
 
 **4. Natural-Language Jailbreaks**
 
@@ -165,4 +130,42 @@ Run this bash command in your terminal
 **8. Decision Tree Making**
 
   From the evaluated results, we can now decide the pinpoint of defensive approaches.
-  ![Alt text](images/my_diagram.png)
+  ![Alt text](Evaluation_Statistics/evaluation_statistics.png)
+
+
+**#📊 Evaluation Results**
+Experiments were conducted across multiple datasets and defense models:
+
+(i) Legilimens: Effective against semantic/contextual attacks (FewShot, GCG variants).
+
+(ii) LlamaGuard: Achieves 94% precision, 84% recall in unsafe detection; strong against semantic rewriting.
+
+(iii) LLMModerator: 100% success against most optimization attacks, but weaker against human-crafted jailbreaks.
+
+(iv) Perplexity defenses: Neutralize AutoPrompt, AutoDAN, GBDA by filtering gibberish high-perplexity suffixes.
+
+(v) Rephrasing/Retokenization: Reduce attack success rates to <1% for optimization-based suffix attacks.
+
+(vi) SecAlign: Preference-tuned to reject natural-language jailbreaks (DirectRequest, HumanJailbreaks, ZeroShot).
+
+  
+**🧪 Structured Evaluation Protocol**
+We propose a 4-step sequential evaluation framework:
+
+**1. Optimization-Based Adversarial Prompts**
+
+Attacks: AutoPrompt, AutoDAN, GBDA
+
+Tests: Perplexity filters.
+
+**2. Optimization-Based Token-Level Attacks**
+
+Attacks: AutoDAN, GBDA, GCG, UAT, PEZ
+
+Tests: Rephrasing/Retokenization defenses.
+
+**3. Semantic Rewriting & Context Poisoning**
+
+Attacks: GBDA, GCG variants, FewShot
+
+Tests: Legilimens, LlamaGuard.
