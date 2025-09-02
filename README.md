@@ -155,7 +155,14 @@ Interpretation:
 ```
   Or you can use Perplexity pro api  with api key passing through the code, in this case you need subscription of that model.
   ```bash
-Run this bash command < python Perplexity_analyzer.py > in the terminal
+Run this bash command in your terminal
+ export PPLX_API_KEY="pplx-xxxxxxxxxxxxxxxx"   (optional if api key is not used implicitly in the code)
+ python Perplexity_analyzer.py
 ```
   The result of the code running evaluation will be stored in a text file in that directory as the name of "defense_evaluation.txt".
-  You can observe the preevaluated result in the 
+  You can observe the preevaluated result in the Evaluation_Statistics/ folder.
+
+**8. Decision Tree Making**
+
+  From the evaluated results, we can now decide the pinpoint of defensive approaches.
+  ![Alt text](images/my_diagram.png)
