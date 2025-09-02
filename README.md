@@ -93,3 +93,15 @@ Interpretation:
 "If an attack succeeds at any step → the corresponding defense layer is missing."
 "If all fail → the defense layer is active and effective."
 ```
+
+**Evaluation process**
+
+1. Initializing Defense Functions
+```bash
+Lacate the given defense functional modules
+legilimens_defense.py, llamaguard_filter.py, LLMmoderator_defense.py, perplexity_filter.py, rephrasing_defense.py, retokenization_defense.py
+Ensure that these modules are in proper working condition.
+```
+2. Dataset Collection
+   All input datasets are provided inside the input_datasets/ folder, which are collected from HarmBench Playground platform, that provides all types of input adversarial queries for different models.
+
