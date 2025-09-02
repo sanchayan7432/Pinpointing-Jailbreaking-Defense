@@ -39,4 +39,20 @@ Defenses are grouped into four primary classes:
   Embedding safety alignment into system prompts and preference fine-tuning.
   Example: LlamaGuard, SecAlign.
 
+  #📊 Evaluation Results
+Experiments were conducted across multiple datasets and defense models:
+
+(i) Legilimens: Effective against semantic/contextual attacks (FewShot, GCG variants).
+
+(ii) LlamaGuard: Achieves 94% precision, 84% recall in unsafe detection; strong against semantic rewriting.
+
+(iii) LLMModerator: 100% success against most optimization attacks, but weaker against human-crafted jailbreaks.
+
+(iv) Perplexity defenses: Neutralize AutoPrompt, AutoDAN, GBDA by filtering gibberish high-perplexity suffixes.
+
+(v) Rephrasing/Retokenization: Reduce attack success rates to <1% for optimization-based suffix attacks.
+
+(vi) SecAlign: Preference-tuned to reject natural-language jailbreaks (DirectRequest, HumanJailbreaks, ZeroShot).
+
+
   
