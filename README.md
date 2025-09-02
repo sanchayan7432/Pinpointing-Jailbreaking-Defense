@@ -152,7 +152,7 @@ Experiments were conducted across multiple datasets and defense models:
 **🧪 Structured Evaluation Protocol**
 We propose a 4-step sequential evaluation framework:
 
-**1. Optimization-Based Adversarial Prompts**
+**1. Optimization-Based Adversarial Prompts** 
 
 Attacks: AutoPrompt, AutoDAN, GBDA
 
