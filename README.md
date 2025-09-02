@@ -63,27 +63,33 @@ Experiments were conducted across multiple datasets and defense models:
 **🧪 Structured Evaluation Protocol**
 We propose a 4-step sequential evaluation framework:
 
-**Optimization-Based Adversarial Prompts**
+**1. Optimization-Based Adversarial Prompts**
 
 Attacks: AutoPrompt, AutoDAN, GBDA
 
 Tests: Perplexity filters.
 
-**Optimization-Based Token-Level Attacks**
+**2. Optimization-Based Token-Level Attacks**
 
 Attacks: AutoDAN, GBDA, GCG, UAT, PEZ
 
 Tests: Rephrasing/Retokenization defenses.
 
-**Semantic Rewriting & Context Poisoning**
+**3. Semantic Rewriting & Context Poisoning**
 
 Attacks: GBDA, GCG variants, FewShot
 
 Tests: Legilimens, LlamaGuard.
 
-**Natural-Language Jailbreaks**
+**4. Natural-Language Jailbreaks**
 
 Attacks: AutoDAN, DirectRequest, HumanJailbreaks, ZeroShot
 
 Tests: LLMModerator, SecAlign.
   
+```bash
+Interpretation:
+
+"If an attack succeeds at any step → the corresponding defense layer is missing."
+"If all fail → the defense layer is active and effective."
+```
